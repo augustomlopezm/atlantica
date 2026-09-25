@@ -299,6 +299,9 @@ input, textarea, select { caret-color: currentColor; }
 .campo--casilla .campo__error { grid-column: 2; }
 .formulario__pie { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; margin-top: 0.5rem; }
 .formulario__estado { font-weight: 700; max-width: 46ch; }
+.formulario__info { font-size: 0.8125rem; line-height: 1.5; color: color-mix(in srgb, var(--butter) 82%, var(--wine)); }
+.formulario__noscript { font-weight: 700; max-width: 46ch; }
+.boton:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
 @media (min-width: 600px) { .formulario { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1000px) { .dossier__rejilla { grid-template-columns: 5fr 6fr; column-gap: clamp(3rem, 6vw, 6rem); } }
 
@@ -338,3 +341,19 @@ input, textarea, select { caret-color: currentColor; }
 .legal__texto ul { margin: 0; padding-left: 1.2rem; }
 .legal__texto a { color: var(--acento); }
 .legal__volver { margin-top: 3rem; font-weight: 700; }
+
+/* mapa:generado:inicio */
+/* Posiciones del mapa, calculadas a partir de coordenadas reales. No editar a mano. */
+.mapa__lienzo { aspect-ratio: 314 / 137; }
+.mp-1 { left: 0; top: 91.67%; }
+.mp-2 { left: 0; top: 50.00%; }
+.mp-3 { left: 0; top: 8.33%; }
+.mp-4 { left: 41.07%; top: 100%; }
+.mp-5 { left: 76.79%; top: 100%; }
+.mp-6 { left: 40.80%; top: 65.20%; }
+.mp-7 { left: 40.80%; top: 78.17%; }
+.mp-8 { left: 40.62%; top: 52.24%; }
+.mp-9 { left: 80.23%; top: 51.62%; }
+.mp-10 { left: 29.44%; top: 25.78%; }
+.mp-11 { top: 11.86%; }
+/* mapa:generado:fin */

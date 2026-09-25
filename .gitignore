@@ -1,4 +1,23 @@
-# Interno: brief y decisiones de negocio, informes. No se publica.
-CLAUDE.md
-docs/
+# Lista cerrada: solo se publica la web. Cualquier otro archivo que se deje en
+# esta carpeta queda fuera por defecto (repositorio público y GitHub Pages).
+/*
+!/index.html
+!/aviso-legal.html
+!/privacidad.html
+!/css/
+!/js/
+!/assets/
+!/.gitignore
+!/.nojekyll
+
+# Por si acaso, nunca, ni siquiera dentro de las carpetas permitidas
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+*.zip
+.env*
 .DS_Store
