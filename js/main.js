@@ -2,17 +2,35 @@
 // Orden deliberado: primero el formulario (lo único imprescindible) y después los efectos
 // visuales, cada uno protegido, para que un navegador antiguo no deje el formulario sin funcionar.
 
-const CORREO = "atlanticarealestate@gmail.com";
+const CORREO = "realestateatlantica@gmail.com";
+const ENVIO = "https://formsubmit.co/ajax/realestateatlantica@gmail.com";   // reenvía la solicitud a nuestro correo
+const EN = document.documentElement.lang === "en";
+const T = EN ? {
+  nombre: "Please enter your name.",
+  correo: "Please enter a valid email, for example name@company.com.",
+  privacidad: "We need your consent to reply.",
+  enviando: "Sending…",
+  ok: (c) => `Thank you. We have received your request and will send the dossier to ${c} shortly.`,
+  error: `Your request could not be sent. Please email us at ${CORREO} or message us on WhatsApp.`,
+} : {
+  nombre: "Escriba su nombre.",
+  correo: "Escriba un correo válido, por ejemplo nombre@empresa.com.",
+  privacidad: "Necesitamos su conformidad para responderle.",
+  enviando: "Enviando…",
+  ok: (c) => `Gracias. Hemos recibido su solicitud y le enviaremos el dossier a ${c} en breve.`,
+  error: `No se ha podido enviar la solicitud. Escríbanos a ${CORREO} o por WhatsApp.`,
+};
 
-// ---------- Formulario: valida y abre el correo del visitante con la solicitud redactada ----------
+// ---------- Formulario: la solicitud nos llega por correo (FormSubmit) sin salir de la página ----------
 const formulario = document.querySelector("[data-formulario]");
 if (formulario) {
+  formulario.noValidate = true;   // validamos aquí con mensajes propios; sin JavaScript valida el navegador
   const estado = formulario.querySelector(".formulario__estado");
   const boton = formulario.querySelector('button[type="submit"]');
   const campos = {
-    nombre: { el: formulario.nombre, error: "Escriba su nombre.", valido: (v) => v.trim().length > 1 },
-    correo: { el: formulario.correo, error: "Escriba un correo válido, por ejemplo nombre@empresa.com.", valido: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) },
-    privacidad: { el: formulario.privacidad, error: "Necesitamos su conformidad para responderle.", valido: (_, el) => el.checked },
+    nombre: { el: formulario.nombre, error: T.nombre, valido: (v) => v.trim().length > 1 },
+    correo: { el: formulario.email, error: T.correo, valido: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) },
+    privacidad: { el: formulario.privacidad, error: T.privacidad, valido: (_, el) => el.checked },
   };
 
   function comprobar(nombre) {
@@ -27,20 +45,24 @@ if (formulario) {
   Object.keys(campos).forEach((n) => campos[n].el.addEventListener(n === "privacidad" ? "change" : "blur", () => comprobar(n)));
 
   formulario.addEventListener("submit", (e) => {
-    e.preventDefault();
     const fallos = Object.keys(campos).filter((n) => !comprobar(n));
-    if (fallos.length) { campos[fallos[0]].el.focus(); estado.textContent = ""; return; }
-    const d = new FormData(formulario);
-    const cuerpo = [
-      "Solicito el dossier para inversores de Atlantica Real Estate.", "",
-      `Nombre: ${d.get("nombre")}`, `Correo: ${d.get("correo")}`,
-      `País de residencia: ${d.get("pais") || "-"}`, `Perfil: ${d.get("perfil") || "-"}`, "",
-      d.get("mensaje") || "",
-    ].join("\n");
-    location.href = `mailto:${CORREO}?subject=${encodeURIComponent("Solicitud de dossier para inversores")}&body=${encodeURIComponent(cuerpo)}`;
-    estado.textContent = `Se ha abierto su programa de correo con la solicitud. Si no se abre, escríbanos a ${CORREO}.`;
+    if (fallos.length) { e.preventDefault(); campos[fallos[0]].el.focus(); estado.textContent = ""; return; }
+    if (!window.fetch || !window.FormData) return;   // navegador muy antiguo: envío clásico a FormSubmit
+    e.preventDefault();
+    const correo = formulario.email.value.trim();
+    boton.disabled = true; estado.textContent = T.enviando;
+    const datos = new FormData(formulario);
+    datos.append("_replyto", correo);   // en el correo que nos llega, "Responder" va directo al visitante
+    fetch(ENVIO, { method: "POST", headers: { Accept: "application/json" }, body: datos })
+      .then((r) => r.json().then((d) => {
+        // FormSubmit devuelve success "false" si el formulario aún no está activado o si rechaza el envío
+        if (!r.ok || String(d.success) === "false") throw new Error(d.message || "envío rechazado");
+        formulario.reset();
+        estado.textContent = T.ok(correo);
+      }))
+      .catch(() => { estado.textContent = T.error; })
+      .then(() => { boton.disabled = false; });
   });
-  if (boton) boton.disabled = false;   // el botón solo se activa cuando el envío ya está controlado
 }
 
 // ---------- Cabecera: transparente sobre la portada, sólida al salir de ella ----------

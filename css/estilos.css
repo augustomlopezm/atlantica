@@ -101,13 +101,16 @@ input, textarea, select { caret-color: currentColor; }
 .nav__enlaces { display: flex; gap: 1.9rem; list-style: none; margin: 0; padding: 0; }
 .nav__enlaces a { display: block; padding-block: 0.5rem; font-weight: 700; font-size: 0.9375rem; text-decoration: none; background: linear-gradient(currentColor 0 0) left bottom / 0 1px no-repeat; transition: background-size 0.35s var(--ease); }
 .nav__enlaces a:hover { background-size: 100% 1px; }
+.nav__idioma { font-weight: 700; font-size: 0.875rem; letter-spacing: 0.04em; text-decoration: none; padding: 0.35rem 0.55rem; border: 1px solid currentColor; }
+.nav__idioma:hover { background: color-mix(in srgb, currentColor 14%, transparent); }
 .menu-boton { display: none; position: relative; z-index: 2; width: 48px; height: 48px; align-items: center; justify-content: center; padding: 0; border: 0; background: none; color: inherit; cursor: pointer; }
 .menu-boton .icono { width: 28px; height: 28px; }
 .menu-boton .icono--cerrar, .menu-boton[aria-expanded="true"] .icono--abrir { display: none; }
 .menu-boton[aria-expanded="true"] .icono--cerrar { display: block; }
 
 @media (max-width: 1099px) {
-  .menu-boton { display: inline-flex; }
+  .cabecera__fila { gap: 0; }
+  .menu-boton { display: inline-flex; flex: none; margin-right: -10px; }   /* el icono queda alineado con el margen; el área táctil sigue siendo de 48 px */
   .nav { position: fixed; inset: 0; z-index: 1; flex-direction: column; align-items: flex-start; justify-content: center; gap: 2.5rem; padding: calc(var(--cabecera) + 2rem) var(--margen) 3rem; background: var(--blackout); color: var(--butter); visibility: hidden; opacity: 0; transition: opacity 0.35s var(--ease), visibility 0s linear 0.35s; }
   .nav[data-abierto] { visibility: visible; opacity: 1; transition: opacity 0.35s var(--ease), visibility 0s; }
   .nav__enlaces { flex-direction: column; gap: 0.75rem; }
@@ -300,7 +303,9 @@ input, textarea, select { caret-color: currentColor; }
 .formulario__pie { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; margin-top: 0.5rem; }
 .formulario__estado { font-weight: 700; max-width: 46ch; }
 .formulario__info { font-size: 0.8125rem; line-height: 1.5; color: color-mix(in srgb, var(--butter) 82%, var(--wine)); }
-.formulario__noscript { font-weight: 700; max-width: 46ch; }
+/* Campo trampa contra bots: fuera de la vista y del teclado, pero en el formulario */
+.trampa { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.formulario { position: relative; }
 .boton:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
 @media (min-width: 600px) { .formulario { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1000px) { .dossier__rejilla { grid-template-columns: 5fr 6fr; column-gap: clamp(3rem, 6vw, 6rem); } }
@@ -333,6 +338,12 @@ input, textarea, select { caret-color: currentColor; }
 /* ---------- Páginas legales ---------- */
 .legal__cabecera { padding-block: 1.25rem; border-bottom: 1px solid var(--linea); }
 .legal__cabecera img { width: 280px; height: auto; }
+.legal__fila { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+/* Por debajo de 360 px no cabe el logo horizontal (mínimo 280 px según el manual): se usa el isotipo. */
+@media (max-width: 359px) {
+  .cabecera__marca, .logo { width: 76px; height: 36px; }
+  .legal__cabecera img { width: 76px; }
+}
 .legal__texto { max-width: 46rem; padding-block: 3.5rem 6rem; }
 .legal__texto h1 { font-size: clamp(2.2rem, 1.6rem + 2vw, 3.2rem); line-height: 1.05; }
 .legal__fecha { margin-top: 0.75rem; font-size: 0.9375rem; color: var(--texto-suave); }

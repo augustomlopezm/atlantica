@@ -1,22 +1,26 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U='; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U='; style-src 'self'; img-src 'self'; font-src 'self'; connect-src https://formsubmit.co; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action https://formsubmit.co; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>Atlantica Real Estate | Inversión inmobiliaria en Valencia, Venezuela</title>
-<meta name="description" content="Convertimos edificios infrautilizados de Valencia, Venezuela, en suites ejecutivas con ingresos en dólares, desde una holding en Madrid.">
+<title>Atlantica Real Estate | Real estate investment in Valencia, Venezuela</title>
+<meta name="description" content="Executive suites, industrial warehouses and land in Valencia, Venezuela. US dollar real estate investment through a holding company in Madrid.">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#F9F3E8" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1E1E1E" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="es_ES">
-<meta property="og:title" content="Atlantica Real Estate | Inversión con propósito">
-<meta property="og:description" content="Suites ejecutivas en Valencia, Venezuela, con ingresos en dólares y seguridad jurídica europea.">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:title" content="Atlantica Real Estate | Investment with purpose">
+<meta property="og:description" content="Executive suites, warehouses and land in Valencia, Venezuela. US dollar investment with European legal certainty.">
 <meta property="og:image" content="https://augustomlopezm.github.io/atlantica/assets/og-imagen.jpg">
 <meta property="og:url" content="https://augustomlopezm.github.io/atlantica/">
 <link rel="canonical" href="https://augustomlopezm.github.io/atlantica/">
+<link rel="alternate" hreflang="es" href="https://augustomlopezm.github.io/atlantica/es/">
+<link rel="alternate" hreflang="en" href="https://augustomlopezm.github.io/atlantica/">
+<link rel="alternate" hreflang="x-default" href="https://augustomlopezm.github.io/atlantica/">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" href="assets/fuentes/sentient-700.woff2" as="font" type="font/woff2" crossorigin>
@@ -28,29 +32,30 @@
 <script src="js/main.js" defer></script>
 </head>
 <body>
-<a class="saltar" href="#contenido">Saltar al contenido</a>
+<a class="saltar" href="#contenido">Skip to content</a>
 <svg class="sprite" aria-hidden="true" focusable="false"><symbol id="i-flecha" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></symbol><symbol id="i-menu" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></symbol><symbol id="i-cerrar" viewBox="0 0 256 256" fill="currentColor"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></symbol></svg>
 
 <header class="cabecera" data-estado="sobre-portada">
   <div class="contenedor cabecera__fila">
-    <a class="cabecera__marca" href="#inicio" aria-label="Atlantica Real Estate, ir al inicio">
-      <img class="logo logo--claro" src="assets/marca/logo-horizontal-butter.png" width="280" height="51" alt="">
-      <img class="logo logo--color" src="assets/marca/logo-horizontal-wine.png" width="280" height="51" alt="">
+    <a class="cabecera__marca" href="#inicio" aria-label="Atlantica Real Estate, back to top">
+      <picture><source media="(max-width: 359px)" srcset="assets/marca/isotipo-butter.png" width="76" height="36"><img class="logo logo--claro" src="assets/marca/logo-horizontal-butter.png" width="280" height="51" alt=""></picture>
+      <picture><source media="(max-width: 359px)" srcset="assets/marca/isotipo-wine.png" width="76" height="36"><img class="logo logo--color" src="assets/marca/logo-horizontal-wine.png" width="280" height="51" alt=""></picture>
     </a>
-    <nav class="nav" id="nav" aria-label="Principal">
+    <nav class="nav" id="nav" aria-label="Main">
       <ul class="nav__enlaces">
         <li><a href="#valencia">Valencia</a></li>
-        <li><a href="#modelo">Modelo</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#estructura">Estructura</a></li>
-        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#modelo">Model</a></li>
+        <li><a href="#proyectos">Projects</a></li>
+        <li><a href="#estructura">Structure</a></li>
+        <li><a href="#equipo">Team</a></li>
       </ul>
-      <a class="boton boton--primario" href="#dossier">Solicitar dossier</a>
+      <a class="nav__idioma" href="es/" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+      <a class="boton boton--primario" href="#dossier">Request dossier</a>
     </nav>
     <button class="menu-boton" type="button" aria-controls="nav" aria-expanded="false">
       <svg class="icono icono--abrir" aria-hidden="true"><use href="#i-menu"/></svg>
       <svg class="icono icono--cerrar" aria-hidden="true"><use href="#i-cerrar"/></svg>
-      <span class="solo-lector">Menú</span>
+      <span class="solo-lector">Menu</span>
     </button>
   </div>
 </header>
@@ -63,14 +68,14 @@
       <img class="portada__foto" src="assets/img/portada-caracas-1600.jpg"
            srcset="assets/img/portada-caracas-1600.jpg 1600w, assets/img/portada-caracas-2240.jpg 2240w"
            sizes="100vw" width="2240" height="1260" fetchpriority="high"
-           alt="Caracas, con el Ávila al fondo y las torres de Parque Central.">
+           alt="Caracas, with El Ávila mountain in the background and the Parque Central towers.">
     </picture>
     <div class="contenedor portada__contenido">
-      <h1 class="portada__titulo" id="portada-titulo">Inversión con propósito.</h1>
-      <p class="portada__texto">Convertimos edificios infrautilizados de Valencia, Venezuela, en suites ejecutivas con ingresos en dólares, desde una holding en Madrid.</p>
+      <h1 class="portada__titulo" id="portada-titulo">Investment with purpose.</h1>
+      <p class="portada__texto">We buy, transform and manage executive suites, industrial warehouses and land in Valencia, Venezuela, through a holding company in Madrid.</p>
       <div class="portada__acciones">
-        <a class="boton boton--primario" href="#dossier">Solicitar dossier</a>
-        <a class="boton boton--contorno-claro" href="#modelo">Ver el modelo <svg class="icono" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+        <a class="boton boton--primario" href="#dossier">Request dossier</a>
+        <a class="boton boton--contorno-claro" href="#modelo">See the model <svg class="icono" aria-hidden="true"><use href="#i-flecha"/></svg></a>
       </div>
     </div>
   </section>
@@ -78,24 +83,24 @@
   <section class="seccion intro" aria-labelledby="intro-titulo">
     <div class="contenedor intro__rejilla">
       <div>
-        <h2 class="intro__titulo" id="intro-titulo">Un puente entre el capital internacional y Venezuela.</h2>
-        <p class="intro__texto">Aplicamos a cada inversión el método de un fondo de private equity: compra disciplinada, gestión profesional y reporting transparente para el inversor.</p>
+        <h2 class="intro__titulo" id="intro-titulo">A bridge between international capital and Venezuela.</h2>
+        <p class="intro__texto">We bring a private equity approach to every investment: disciplined acquisition, professional management and transparent investor reporting.</p>
       </div>
       <ul class="pilares">
         <li>
           <picture class="pilares__icono"><source srcset="assets/marca/rosa-butter.png" media="(prefers-color-scheme: dark)"><img src="assets/marca/rosa-wine.png" width="40" height="34" alt=""></picture>
-          <h3>Seguridad jurídica europea</h3>
-          <p>El capital y los acuerdos entre socios se rigen por una holding en Madrid, bajo derecho español.</p>
+          <h3>European legal certainty</h3>
+          <p>Capital and partner agreements sit in a holding company in Madrid, governed by Spanish law.</p>
         </li>
         <li>
           <picture class="pilares__icono"><source srcset="assets/marca/barras-butter.png" media="(prefers-color-scheme: dark)"><img src="assets/marca/barras-wine.png" width="30" height="40" alt=""></picture>
-          <h3>Compra por debajo del coste de reposición</h3>
-          <p>Adquirimos edificios por menos de lo que costaría construirlos hoy. El margen empieza el día de la compra.</p>
+          <h3>Bought below replacement cost</h3>
+          <p>We acquire buildings for less than it would cost to build them today. The margin starts on the day we buy.</p>
         </li>
         <li>
           <picture class="pilares__icono"><source srcset="assets/marca/globo-butter.png" media="(prefers-color-scheme: dark)"><img src="assets/marca/globo-wine.png" width="40" height="40" alt=""></picture>
-          <h3>Activos que funcionan solos</h3>
-          <p>Cada edificio tiene agua, energía y conectividad propias. La operación no depende de los servicios públicos.</p>
+          <h3>Self-sufficient assets</h3>
+          <p>Every property is self-sufficient in power and water, with its own connectivity. Operations do not depend on public utilities.</p>
         </li>
       </ul>
     </div>
@@ -104,20 +109,20 @@
   <section class="seccion valencia" id="valencia" aria-labelledby="valencia-titulo">
     <div class="contenedor valencia__rejilla">
       <div>
-        <h2 id="valencia-titulo">Demanda de 2026, infraestructura de 1998.</h2>
-        <p class="entradilla">Si Caracas es la capital administrativa, Valencia es la economía real de Venezuela: el lugar donde se produce y se distribuye.</p>
+        <h2 id="valencia-titulo">2026 demand, 1998 infrastructure.</h2>
+        <p class="entradilla">If Caracas is the administrative capital, Valencia is Venezuela's real economy: where goods are made and distributed.</p>
         <ul class="lista-datos">
-          <li><strong>Junto al principal puerto del país.</strong> Puerto Cabello está a 50 km por carretera.</li>
-          <li><strong>La mayor zona industrial de Venezuela.</strong> Consumo masivo, farmacéutica y manufactura en actividad continua, con un flujo constante de ejecutivos e ingenieros.</li>
-          <li><strong>Una oferta que se quedó atrás.</strong> Los hoteles cobran unos 110 dólares la noche por habitaciones anticuadas, y el alquiler temporal está en manos de particulares sin estándares comunes.</li>
-          <li><strong>Solo en la Zona Norte.</strong> Invertimos en Guaparo, El Viñedo, La Trigaleña y Prebo, el distrito con mayor poder adquisitivo de la ciudad.</li>
+          <li><strong>Next to the country's main port.</strong> Puerto Cabello is 50 km away by road.</li>
+          <li><strong>Venezuela's largest industrial zone.</strong> Consumer goods, pharmaceuticals and manufacturing in continuous operation, with a steady flow of executives and engineers.</li>
+          <li><strong>Supply that has fallen behind.</strong> Hotels charge around US$110 a night for outdated rooms, and short-term rentals are in the hands of private owners with no common standards.</li>
+          <li><strong>Three asset types.</strong> Executive suites in the Zona Norte (Guaparo, El Viñedo, La Trigaleña and Prebo), warehouses in the industrial zones and land with development potential.</li>
         </ul>
       </div>
-      <figure class="mapa" role="img" aria-label="Mapa de Venezuela. Valencia, donde operamos hoy, está a 50 kilómetros por carretera de Puerto Cabello. La expansión prevista incluye Tucacas, Caracas e Isla de Margarita.">
-        <div class="mapa__lienzo"><svg class="mapa__reticula" viewBox="0 0 314.4 137.0" preserveAspectRatio="none" aria-hidden="true" focusable="false"><line x1="0" y1="125.6" x2="314.4" y2="125.6"/><line x1="0" y1="68.5" x2="314.4" y2="68.5"/><line x1="0" y1="11.4" x2="314.4" y2="11.4"/><line x1="16.8" y1="0" x2="16.8" y2="137.0"/><line x1="129.1" y1="0" x2="129.1" y2="137.0"/><line x1="241.4" y1="0" x2="241.4" y2="137.0"/><line class="mapa__ruta" x1="128.3" y1="107.1" x2="127.7" y2="71.6"/></svg><span class="mapa__coord mp-1">10,0° N</span><span class="mapa__coord mp-2">10,5° N</span><span class="mapa__coord mp-3">11,0° N</span><span class="mapa__coord mapa__coord--lon mp-4">68° O</span><span class="mapa__coord mapa__coord--lon mp-5">67° O</span><span class="mapa__dato mp-6">50 km</span><span class="mapa__punto mapa__punto--actual mp-7"></span><span class="mapa__lugar mapa__lugar--der mapa__lugar--principal mp-7">Valencia</span><span class="mapa__punto mapa__punto--puerto mp-8"></span><span class="mapa__lugar mapa__lugar--der mp-8">Puerto Cabello</span><span class="mapa__punto mapa__punto--prevista mp-9"></span><span class="mapa__lugar mapa__lugar--arriba mp-9">Caracas</span><span class="mapa__punto mapa__punto--prevista mp-10"></span><span class="mapa__lugar mapa__lugar--der mp-10">Tucacas</span><span class="mapa__lugar mapa__lugar--borde mp-11">Isla de Margarita <svg class="icono" aria-hidden="true"><use href="#i-flecha"/></svg></span><picture class="mapa__rosa"><source srcset="assets/marca/rosa-butter.png" media="(prefers-color-scheme: dark)"><img src="assets/marca/rosa-wine.png" width="30" height="25" alt=""></picture></div>
+      <figure class="mapa" role="img" aria-label="Map of Venezuela. Valencia, where we operate today, is 50 kilometers by road from Puerto Cabello. Planned expansion includes Tucacas, Caracas and Margarita Island.">
+        <div class="mapa__lienzo"><svg class="mapa__reticula" viewBox="0 0 314.4 137.0" preserveAspectRatio="none" aria-hidden="true" focusable="false"><line x1="0" y1="125.6" x2="314.4" y2="125.6"/><line x1="0" y1="68.5" x2="314.4" y2="68.5"/><line x1="0" y1="11.4" x2="314.4" y2="11.4"/><line x1="16.8" y1="0" x2="16.8" y2="137.0"/><line x1="129.1" y1="0" x2="129.1" y2="137.0"/><line x1="241.4" y1="0" x2="241.4" y2="137.0"/><line class="mapa__ruta" x1="128.3" y1="107.1" x2="127.7" y2="71.6"/></svg><span class="mapa__coord mp-1">10.0° N</span><span class="mapa__coord mp-2">10.5° N</span><span class="mapa__coord mp-3">11.0° N</span><span class="mapa__coord mapa__coord--lon mp-4">68° W</span><span class="mapa__coord mapa__coord--lon mp-5">67° W</span><span class="mapa__dato mp-6">50 km</span><span class="mapa__punto mapa__punto--actual mp-7"></span><span class="mapa__lugar mapa__lugar--der mapa__lugar--principal mp-7">Valencia</span><span class="mapa__punto mapa__punto--puerto mp-8"></span><span class="mapa__lugar mapa__lugar--der mp-8">Puerto Cabello</span><span class="mapa__punto mapa__punto--prevista mp-9"></span><span class="mapa__lugar mapa__lugar--arriba mp-9">Caracas</span><span class="mapa__punto mapa__punto--prevista mp-10"></span><span class="mapa__lugar mapa__lugar--der mp-10">Tucacas</span><span class="mapa__lugar mapa__lugar--borde mp-11">Margarita Island <svg class="icono" aria-hidden="true"><use href="#i-flecha"/></svg></span><picture class="mapa__rosa"><source srcset="assets/marca/rosa-butter.png" media="(prefers-color-scheme: dark)"><img src="assets/marca/rosa-wine.png" width="30" height="25" alt=""></picture></div>
         <figcaption class="mapa__leyenda" aria-hidden="true">
-          <span class="leyenda leyenda--actual">Operación actual</span>
-          <span class="leyenda leyenda--prevista">Expansión prevista</span>
+          <span class="leyenda leyenda--actual">Current operations</span>
+          <span class="leyenda leyenda--prevista">Planned expansion</span>
         </figcaption>
       </figure>
     </div>
@@ -125,14 +130,14 @@
 
   <section class="seccion modelo" id="modelo" aria-labelledby="modelo-titulo">
     <div class="contenedor">
-      <h2 id="modelo-titulo">Controlamos el activo de principio a fin.</h2>
-      <p class="entradilla">No construimos desde cero. Compramos lo que ya existe, lo transformamos y lo gestionamos hasta su venta.</p>
+      <h2 id="modelo-titulo">We control the asset from start to finish.</h2>
+      <p class="entradilla">We don't build from scratch. We buy what already exists, transform it and manage it through to its sale.</p>
       <ol class="cadena" data-cadena>
-        <li><h3>Identificar</h3><p>Buscamos edificios comerciales y residenciales infrautilizados en los corredores industriales, a menudo antes de que salgan al mercado.</p></li>
-        <li><h3>Adquirir</h3><p>Compramos tras una due diligence rigurosa y solo a un precio de entrada que deje margen desde el primer día.</p></li>
-        <li><h3>Transformar</h3><p>Reconvertimos los espacios en suites ejecutivas y les damos agua, energía y conectividad propias.</p></li>
-        <li><h3>Gestionar</h3><p>Operamos cada suite con contratos en dólares, mantenimiento y conserjería las 24 horas.</p></li>
-        <li><h3>Vender</h3><p>Con el activo estabilizado, lo vendemos a compradores institucionales, fondos o REITs.</p></li>
+        <li><h3>Identify</h3><p>We look for buildings, warehouses and land with untapped value in Valencia and its industrial zones, often before they reach the market.</p></li>
+        <li><h3>Acquire</h3><p>We buy after rigorous due diligence, and only at an entry price that leaves a margin from day one.</p></li>
+        <li><h3>Transform</h3><p>We convert each space into a property that is self-sufficient in power and water.</p></li>
+        <li><h3>Manage</h3><p>We run every suite with US dollar contracts, maintenance and a 24-hour concierge.</p></li>
+        <li><h3>Sell</h3><p>Once the asset is stabilized, we sell it to institutional buyers, funds or REITs.</p></li>
       </ol>
     </div>
   </section>
@@ -142,22 +147,22 @@
       <figure class="foto suites__principal">
         <img src="assets/img/suite-atlas-1600.jpg" srcset="assets/img/suite-atlas-960.jpg 960w, assets/img/suite-atlas-1600.jpg 1600w"
              sizes="(min-width: 1000px) 56vw, 100vw" width="1600" height="1081" loading="lazy" decoding="async"
-             alt="Render de una suite del Proyecto Atlas: cama doble, comedor redondo y cocina integrada, con luz cálida indirecta.">
-        <figcaption>Render del Proyecto Atlas.</figcaption>
+             alt="Rendering of a Project Atlas suite: double bed, round dining table and open kitchen, with warm indirect lighting.">
+        <figcaption>Project Atlas rendering.</figcaption>
       </figure>
       <div class="suites__texto">
-        <h2 id="suites-titulo">Suites ejecutivas para quien viaja por trabajo.</h2>
-        <p>Diseñamos para ejecutivos, ingenieros y delegaciones técnicas de multinacionales que pasan días o semanas en Valencia. Un producto mejor que el hotel tradicional, por <span class="sin-corte">55-65 dólares</span> la noche.</p>
+        <h2 id="suites-titulo">Executive suites for business travelers.</h2>
+        <p>Designed for executives, engineers and technical teams from multinationals who spend days or weeks in Valencia. A better product than a traditional hotel, at <span class="sin-corte">US$55–65</span> a night.</p>
         <ul class="prestaciones">
-          <li><h3>Acceso inteligente</h3><p>Cerraduras electrónicas y check-in digital, sin recepción física.</p></li>
-          <li><h3>Precio dinámico</h3><p>La tarifa se ajusta a la demanda en tiempo real.</p></li>
-          <li><h3>Operación continua</h3><p>Agua, energía y datos propios para no depender de la red pública.</p></li>
-          <li><h3>Panel del inversor</h3><p>Ocupación, ingresos y rendimiento del activo, siempre a la vista.</p></li>
+          <li><h3>Smart access</h3><p>Electronic locks and digital check-in, with no front desk.</p></li>
+          <li><h3>Dynamic pricing</h3><p>Rates adjust to demand in real time.</p></li>
+          <li><h3>Uninterrupted operation</h3><p>Self-sufficient in power and water, with its own connectivity, independent of the public grid.</p></li>
+          <li><h3>Investor dashboard</h3><p>Occupancy, revenue and asset performance, always in view.</p></li>
         </ul>
         <figure class="foto suites__secundaria">
           <img src="assets/img/dormitorio-atlas.jpg" width="1234" height="845" loading="lazy" decoding="async"
-               alt="Render de un dormitorio del Proyecto Atlas con cortinas de suelo a techo y luz indirecta en el cabecero.">
-          <figcaption>Render del Proyecto Atlas.</figcaption>
+               alt="Rendering of a Project Atlas bedroom with floor-to-ceiling curtains and indirect lighting behind the headboard.">
+          <figcaption>Project Atlas rendering.</figcaption>
         </figure>
       </div>
     </div>
@@ -165,33 +170,33 @@
 
   <section class="seccion proyectos" id="proyectos" aria-labelledby="proyectos-titulo">
     <div class="contenedor">
-      <h2 id="proyectos-titulo">Proyecto Atlas, el primero de una cartera.</h2>
+      <h2 id="proyectos-titulo">Project Atlas, the first in a portfolio.</h2>
       <div class="atlas">
         <div class="atlas__panel">
           <img class="atlas__barras" src="assets/marca/barras-butter-grande.png" width="450" height="600" alt="">
           <p class="atlas__nombre">Atlas</p>
-          <p class="atlas__lugar">Centro de negocios de Valencia</p>
+          <p class="atlas__lugar">Valencia business district</p>
         </div>
         <div class="atlas__ficha">
-          <p class="atlas__resumen">Un edificio comercial reconvertido en suites ejecutivas, totalmente equipadas, para estancias corporativas cortas y medias.</p>
+          <p class="atlas__resumen">A commercial building converted into fully equipped executive suites for short and medium-term corporate stays.</p>
           <dl class="ficha">
-            <div><dt>Superficie</dt><dd>720 m²</dd></div>
-            <div><dt>Unidades</dt><dd>15 suites</dd></div>
-            <div><dt>Ingresos</dt><dd>100 % en dólares</dd></div>
-            <div><dt>Infraestructura</dt><dd>Agua y energía propias</dd></div>
+            <div><dt>Floor area</dt><dd>720 m²</dd></div>
+            <div><dt>Units</dt><dd>15 suites</dd></div>
+            <div><dt>Revenue</dt><dd>100% in US dollars</dd></div>
+            <div><dt>Infrastructure</dt><dd>Self-sufficient in power and water</dd></div>
           </dl>
-          <p class="atlas__nota">Las proyecciones financieras y el calendario del proyecto están en el dossier para inversores.</p>
+          <p class="atlas__nota">The financial projections and the project timeline are in the investor dossier.</p>
         </div>
       </div>
       <div class="cartera">
         <div>
-          <h3 class="cartera__titulo">En estudio</h3>
+          <h3 class="cartera__titulo">In the pipeline</h3>
           <ul class="cartera__lista">
-            <li><p class="cartera__nombre">Artemis</p><p>Valencia Norte. Entre 15 y 20 unidades ejecutivas, con estrategia mixta de estancias cortas y largas.</p></li>
-            <li><p class="cartera__nombre">Artemis II</p><p>Valencia Norte. Entre 15 y 20 viviendas dispersas, agrupadas en una sola cartera de alojamiento corporativo.</p></li>
+            <li><p class="cartera__nombre">Artemis</p><p>North Valencia. 15 to 20 executive units, with a mix of short and long stays.</p></li>
+            <li><p class="cartera__nombre">Artemis II</p><p>North Valencia. 15 to 20 individual homes across the area, grouped into a single corporate housing portfolio.</p></li>
           </ul>
         </div>
-        <p class="cartera__vision">El objetivo: más de 200 unidades entre Valencia, Tucacas, Caracas e Isla de Margarita, gestionadas desde una sola plataforma.</p>
+        <p class="cartera__vision">The goal: more than 200 units across Valencia, Tucacas, Caracas and Margarita Island, managed from a single platform.</p>
       </div>
     </div>
   </section>
@@ -199,27 +204,27 @@
   <section class="banda" id="estructura" aria-labelledby="estructura-titulo">
     <img class="banda__foto" src="assets/img/madrid-2000.jpg" srcset="assets/img/madrid-1000.jpg 1000w, assets/img/madrid-2000.jpg 2000w"
          sizes="100vw" width="2000" height="1333" loading="lazy" decoding="async"
-         alt="La Gran Vía de Madrid al atardecer, con los edificios Metrópolis y Telefónica.">
+         alt="Madrid's Gran Vía at dusk, with the Metrópolis and Telefónica buildings.">
     <div class="contenedor banda__contenido">
-      <h2 id="estructura-titulo">Mercado emergente, seguridad jurídica europea.</h2>
-      <p>La inversión se canaliza a través de nuestra holding en Madrid. Los acuerdos entre socios y los contratos de participación se rigen por el derecho español y europeo.</p>
+      <h2 id="estructura-titulo">Emerging market, European legal certainty.</h2>
+      <p>Investment is channeled through our holding company in Madrid. Partner agreements and participation contracts are governed by Spanish and European law.</p>
       <ul class="garantias">
-        <li><strong>Una estructura centralizada</strong> para recibir y distribuir el capital.</li>
-        <li><strong>Reporting periódico</strong> y transparencia en la repatriación de beneficios.</li>
-        <li><strong>Números prudentes.</strong> Cada proyecto se valida con ocupaciones moderadas, no con el mejor escenario.</li>
+        <li><strong>A centralized structure</strong> to receive and distribute capital.</li>
+        <li><strong>Regular reporting</strong> and transparency in the repatriation of profits.</li>
+        <li><strong>Conservative numbers.</strong> Every project is tested against moderate occupancy, not the best-case scenario.</li>
       </ul>
     </div>
   </section>
 
   <section class="seccion equipo" id="equipo" aria-labelledby="equipo-titulo">
     <div class="contenedor">
-      <h2 id="equipo-titulo">Quién está detrás.</h2>
+      <h2 id="equipo-titulo">The people behind Atlantica.</h2>
       <ul class="equipo__lista">
-        <li><h3>Ángel Araujo Herrera</h3><p class="rol">Estrategia de capital</p><p>Captación de inversores, relación con capital introducers y estrategia internacional.</p></li>
-        <li><h3>Augusto López M.</h3><p class="rol">Gobierno de la inversión y relación con inversores</p><p>Contratos con socios, cumplimiento normativo y reporting a inversores.</p></li>
-        <li><h3>Felipe De Sousa</h3><p class="rol">Finanzas corporativas</p><p>Tesorería, banca, fiscalidad en varias jurisdicciones y modelización financiera.</p></li>
-        <li><h3>Diego Aponte</h3><p class="rol">Operaciones</p><p>Operación sobre el terreno, gestión de inquilinos y regulación local.</p></li>
-        <li><h3>Carlos Salcedo</h3><p class="rol">Ingeniería de proyectos</p><p>Ingeniería, transformación de los edificios y supervisión técnica de la inversión en obra.</p></li>
+        <li><h3>Ángel Araujo Herrera</h3><p class="rol">Capital strategy</p><p>Fundraising, relationships with capital introducers and international strategy.</p></li>
+        <li><h3>Augusto López M.</h3><p class="rol">Investment governance and investor relations</p><p>Partner agreements, regulatory compliance and investor reporting.</p></li>
+        <li><h3>Felipe De Sousa</h3><p class="rol">Corporate finance</p><p>Treasury, banking, multi-jurisdictional tax and financial modeling.</p></li>
+        <li><h3>Diego Aponte</h3><p class="rol">Operations</p><p>On-the-ground operations, tenant management and local regulations.</p></li>
+        <li><h3>Carlos Salcedo</h3><p class="rol">Project engineering</p><p>Engineering, building conversions and technical oversight of the investment on site.</p></li>
       </ul>
     </div>
   </section>
@@ -227,48 +232,50 @@
   <section class="dossier" id="dossier" aria-labelledby="dossier-titulo">
     <div class="contenedor dossier__rejilla">
       <div>
-        <h2 id="dossier-titulo">Solicite el dossier para inversores.</h2>
-        <p class="dossier__texto">Le enviamos las proyecciones financieras del Proyecto Atlas, la estructura de la inversión y el calendario. Sin compromiso.</p>
-        <p class="dossier__alternativa">¿Prefiere hablar directamente? <a data-whatsapp href="https://wa.me/584244149968?text=Hola%2C%20me%20interesa%20recibir%20informaci%C3%B3n%20sobre%20Atlantica%20Real%20Estate." target="_blank" rel="noopener">Escríbanos por WhatsApp</a>.</p>
+        <h2 id="dossier-titulo">Request the investor dossier.</h2>
+        <p class="dossier__texto">We will send you the financial projections for Project Atlas, the investment structure and the timeline. No obligation.</p>
+        <p class="dossier__alternativa">Prefer to talk directly? <a data-whatsapp href="https://wa.me/584244149968?text=Hello%2C%20I%20would%20like%20to%20receive%20information%20about%20Atlantica%20Real%20Estate." target="_blank" rel="noopener">Message us on WhatsApp</a>.</p>
       </div>
-      <form class="formulario" data-formulario novalidate>
+      <form class="formulario" data-formulario action="https://formsubmit.co/realestateatlantica@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nueva solicitud de dossier (web en inglés)">
+        <input type="hidden" name="_template" value="table">
+        <div class="trampa" aria-hidden="true"><label for="f-web">Leave this field empty</label><input id="f-web" type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
         <div class="campo">
-          <label for="f-nombre">Nombre y apellidos</label>
+          <label for="f-nombre">Full name</label>
           <input id="f-nombre" name="nombre" autocomplete="name" required aria-describedby="e-nombre">
           <p class="campo__error" id="e-nombre" hidden></p>
         </div>
         <div class="campo">
-          <label for="f-correo">Correo electrónico</label>
-          <input id="f-correo" name="correo" type="email" autocomplete="email" required aria-describedby="e-correo">
+          <label for="f-correo">Email</label>
+          <input id="f-correo" name="email" type="email" autocomplete="email" required aria-describedby="e-correo">
           <p class="campo__error" id="e-correo" hidden></p>
         </div>
         <div class="campo">
-          <label for="f-pais">País de residencia <span class="campo__opcional">(opcional)</span></label>
+          <label for="f-pais">Country of residence <span class="campo__opcional">(optional)</span></label>
           <input id="f-pais" name="pais" autocomplete="country-name">
         </div>
         <div class="campo">
-          <label for="f-perfil">Perfil <span class="campo__opcional">(opcional)</span></label>
+          <label for="f-perfil">Profile <span class="campo__opcional">(optional)</span></label>
           <select id="f-perfil" name="perfil">
-            <option value="">Seleccione una opción</option>
-            <option>Inversor particular</option>
+            <option value="">Select an option</option>
+            <option>Private investor</option>
             <option>Family office</option>
-            <option>Inversor institucional</option>
-            <option>Otro</option>
+            <option>Institutional investor</option>
+            <option>Other</option>
           </select>
         </div>
         <div class="campo campo--ancho">
-          <label for="f-mensaje">Mensaje <span class="campo__opcional">(opcional)</span></label>
+          <label for="f-mensaje">Message <span class="campo__opcional">(optional)</span></label>
           <textarea id="f-mensaje" name="mensaje" rows="3"></textarea>
         </div>
         <div class="campo campo--ancho campo--casilla">
           <input id="f-privacidad" name="privacidad" type="checkbox" required aria-describedby="e-privacidad">
-          <label for="f-privacidad">Acepto que Atlantica use estos datos solo para responder a mi solicitud. <a href="privacidad.html">Privacidad</a></label>
+          <label for="f-privacidad">I agree that Atlantica may use this information solely to respond to my request. <a href="privacy.html">Privacy</a></label>
           <p class="campo__error" id="e-privacidad" hidden></p>
         </div>
-        <p class="campo--ancho formulario__info">Responsable: Atlantica Real Estate. Finalidad: responder a su solicitud. Puede acceder a sus datos, rectificarlos o suprimirlos, entre otros derechos que explica la <a href="privacidad.html">política de privacidad</a>.</p>
+        <p class="campo--ancho formulario__info">Data controller: Atlantica Real Estate. Purpose: to respond to your request. You can access, correct or delete your data, among other rights explained in the <a href="privacy.html">privacy policy</a>.</p>
         <div class="campo--ancho formulario__pie">
-          <button class="boton boton--claro" type="submit" disabled>Solicitar dossier</button>
-          <noscript><p class="formulario__noscript">Para solicitar el dossier, escríbanos a <a href="mailto:atlanticarealestate@gmail.com">atlanticarealestate@gmail.com</a> o por <a href="https://wa.me/584244149968?text=Hola%2C%20me%20interesa%20recibir%20informaci%C3%B3n%20sobre%20Atlantica%20Real%20Estate.">WhatsApp</a>.</p></noscript>
+          <button class="boton boton--claro" type="submit">Request dossier</button>
           <p class="formulario__estado" role="status" aria-live="polite"></p>
         </div>
       </form>
@@ -281,19 +288,19 @@
   <div class="contenedor pie__rejilla">
     <img class="pie__logo" src="assets/marca/logo-principal-butter.png" width="180" height="86" alt="Atlantica Real Estate" loading="lazy">
     <div>
-      <p class="pie__titulo">Dónde estamos</p>
-      <p>Holding en Madrid, España.<br>Operaciones en Valencia, Venezuela.</p>
+      <p class="pie__titulo">Where we are</p>
+      <p>Holding company in Madrid, Spain.<br>Operations in Valencia, Venezuela.</p>
     </div>
     <div>
-      <p class="pie__titulo">Contacto</p>
-      <p>Correo: <a data-correo href="mailto:atlanticarealestate@gmail.com">atlanticarealestate@gmail.com</a></p>
-      <p>WhatsApp: <a data-whatsapp href="https://wa.me/584244149968?text=Hola%2C%20me%20interesa%20recibir%20informaci%C3%B3n%20sobre%20Atlantica%20Real%20Estate." target="_blank" rel="noopener">+58 424 414 9968</a></p>
+      <p class="pie__titulo">Contact</p>
+      <p>Email: <a data-correo href="mailto:realestateatlantica@gmail.com">realestateatlantica@gmail.com</a></p>
+      <p>WhatsApp: <a data-whatsapp href="https://wa.me/584244149968?text=Hello%2C%20I%20would%20like%20to%20receive%20information%20about%20Atlantica%20Real%20Estate." target="_blank" rel="noopener">+58 424 414 9968</a></p>
     </div>
   </div>
   <div class="contenedor pie__legal" id="pie-legal">
-    <p>La información de esta web es orientativa y no constituye una oferta de valores ni una recomendación de inversión. Las cifras y condiciones pueden variar; consulte con nuestro equipo los términos vigentes.</p>
-    <p class="pie__enlaces"><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Política de privacidad</a></p>
-    <p>Fotografías: <a href="https://commons.wikimedia.org/wiki/File:Panoramic_View_of_Caracas_from_Militar_Hospital.jpg">Caracas</a>, Wilfredor (CC0); <a href="https://commons.wikimedia.org/w/index.php?curid=131073829">Gran Vía, Madrid</a>, Nan Palmero (<a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>). Imágenes recortadas y comprimidas. Renders del Proyecto Atlas: Arq. Daniela Campero y Arq. Javier Martín.</p>
+    <p>The information on this website is for guidance only and does not constitute an offer of securities or an investment recommendation. Figures and terms may change; please ask our team for the current terms.</p>
+    <p class="pie__enlaces"><a href="legal-notice.html">Legal notice</a><a href="privacy.html">Privacy policy</a></p>
+    <p>Photos: <a href="https://commons.wikimedia.org/wiki/File:Panoramic_View_of_Caracas_from_Militar_Hospital.jpg">Caracas</a>, Wilfredor (CC0); <a href="https://commons.wikimedia.org/w/index.php?curid=131073829">Gran Vía, Madrid</a>, Nan Palmero (<a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>). Images cropped and compressed. Project Atlas renderings: Arch. Daniela Campero and Arch. Javier Martín.</p>
     <p>© 2026 Atlantica Real Estate</p>
   </div>
 </footer>

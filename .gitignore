@@ -2,8 +2,9 @@
 # esta carpeta queda fuera por defecto (repositorio público y GitHub Pages).
 /*
 !/index.html
-!/aviso-legal.html
-!/privacidad.html
+!/legal-notice.html
+!/privacy.html
+!/es/
 !/css/
 !/js/
 !/assets/
@@ -19,5 +20,9 @@
 *.ppt
 *.pptx
 *.zip
+*.md
+*.txt
+*.json
+*.map
 .env*
 .DS_Store
